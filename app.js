@@ -10,4 +10,14 @@ app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Routes Imports
+const product = require("./routes/productRoute");
+
+app.use("/api/v1", product);
+
+
+
+
+
+
 module.exports = app;
