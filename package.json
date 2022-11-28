@@ -1,28 +1,30 @@
 {
-  "name": "backend",
+  "name": "ecommerce",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "backend/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/naimur202163/ChawkBazer-Backend.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/naimur202163/ChawkBazer-Backend/issues"
-  },
-  "homepage": "https://github.com/naimur202163/ChawkBazer-Backend#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "epxress": "^0.0.1-security",
-    "mongoose": "^6.7.3",
-    "nodemon": "^2.0.20"
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.26.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.5",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.16",
+    "stripe": "^8.174.0",
+    "validator": "^13.6.0"
   }
 }
