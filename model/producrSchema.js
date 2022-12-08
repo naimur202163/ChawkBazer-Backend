@@ -43,7 +43,14 @@ const productSchema = mongoose.Schema({
     type: Number,
     required: [true, "Enter the Produt Sale Price"],
   },
-
+  category: {
+    type: String,
+    required: [true, "Please Enter the Category"],
+  },
+  type: {
+    type: String,
+    requiredl: [true, "Please Enter the Type"],
+  },
   variations: [
     {
       value: {
